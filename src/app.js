@@ -16,8 +16,8 @@ store.dispatch(addExpense({ description: "Water bill", amount: 504, createdAt: 3
 store.dispatch(addExpense({ description: "Gas bill", amount: 932, createdAt: 1000 }));
 store.dispatch(addExpense({ description: "Insurance bill", amount: 125, createdAt: 5000 }));
 
-console.log(store.getState());
-console.log("One liner:", getVisibleExpenses(store.getState().expenses, store.getState().filters));
+// console.log(store.getState());
+// console.log("One liner:", getVisibleExpenses(store.getState().expenses, store.getState().filters));
 
 const jsx = (
   <Provider store={store}>
