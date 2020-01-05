@@ -47,7 +47,6 @@ export default class ExpenseForm extends React.Component {
     if (!this.state.description || !this.state.amount) {
       // error message
       this.setState(() => ({ error: true }));
-      console.log("Error");
     } else {
       // Clear error
       this.setState(() => ({ error: false }));
@@ -57,7 +56,6 @@ export default class ExpenseForm extends React.Component {
         createdAt: this.state.createdAt.valueOf(),
         note: this.state.note
       });
-      console.log("Submitted");
     }
   };
 

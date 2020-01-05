@@ -3,8 +3,7 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import AppRouter from "./routers/AppRouter";
 import configureStore from "./store/configureStore";
-import { addExpense } from "./actions/expenses";
-import { setTextFilter } from "./actions/filters";
+import { startSetExpenses } from "./actions/expenses";
 import getVisibleExpenses from "./selectors/expenses";
 import "normalize.css/normalize.css";
 import "./styles/styles.scss";
@@ -13,17 +12,14 @@ import "./firebase/firebase";
 
 const store = configureStore();
 
-store.dispatch(addExpense({ description: "Water bill", amount: 504, createdAt: 3500 }));
-store.dispatch(addExpense({ description: "Gas bill", amount: 932, createdAt: 1000 }));
-store.dispatch(addExpense({ description: "Insurance bill", amount: 125, createdAt: 5000 }));
-
-// console.log(store.getState());
-// console.log("One liner:", getVisibleExpenses(store.getState().expenses, store.getState().filters));
-
 const jsx = (
   <Provider store={store}>
     <AppRouter />
   </Provider>
 );
 
-ReactDOM.render(jsx, document.getElementById("app"));
+ReactDOM.render(<p>Loading...</p>, document.getElementById("app"));
+
+store.dispatch(startSetExpenses()).then(() => {
+  ReactDOM.render(jsx, document.getElementById("app"));
+});
