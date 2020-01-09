@@ -4,8 +4,12 @@ import { startLogin } from "../actions/auth";
 
 export const Login = props => {
   return (
-    <div>
-      <button onClick={props.startLogin}>Login</button>
+    <div className="box-layout">
+      <div className="box-layout__box">
+        <h1 className="box-layout__title">Expensify app</h1>
+        <p>Start managing your expenses and save money!</p>
+        <button onClick={props.startLogin} className="button">Login with Google</button>
+      </div>
     </div>
   );
 };

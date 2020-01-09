@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -5,8 +9,10 @@ html {
 }
 
 body {
+  color: $dark-grey;
   font-size: $m-size;
-  background: #d9dbe7;
+  background: white;
+  line-height: 1.6;
 }
 
 button {

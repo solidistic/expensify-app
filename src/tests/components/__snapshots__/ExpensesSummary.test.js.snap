@@ -1,42 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpenseSummary correctly with multiple expenses 1`] = `
-<div>
-  <p>
-    Viewing 
-    23
-     
-    expenses
-     totalling
-     
-    $7,201.90
-  </p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h2
+      className="page-header__title"
+    >
+      Viewing 
+      <span>
+        23
+      </span>
+       
+      expenses
+       totalling
+       
+      <span>
+        $7,201.90
+      </span>
+    </h2>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        to="/create"
+      >
+        Add expense
+      </Link>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`should render ExpenseSummary correctly with one expense 1`] = `
-<div>
-  <p>
-    Viewing 
-    1
-     
-    expense
-     totalling
-     
-    $1.20
-  </p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h2
+      className="page-header__title"
+    >
+      Viewing 
+      <span>
+        1
+      </span>
+       
+      expense
+       totalling
+       
+      <span>
+        $1.20
+      </span>
+    </h2>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        to="/create"
+      >
+        Add expense
+      </Link>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`should render ExpensesSummary correctly 1`] = `
-<div>
-  <p>
-    Viewing 
-     
-    expenses
-     totalling
-     
-    $0.00
-  </p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h2
+      className="page-header__title"
+    >
+      Viewing 
+      <span />
+       
+      expenses
+       totalling
+       
+      <span>
+        $0.00
+      </span>
+    </h2>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        to="/create"
+      >
+        Add expense
+      </Link>
+    </div>
+  </div>
 </div>
 `;
